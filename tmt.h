@@ -32,6 +32,10 @@
 #include <stddef.h>
 #include <wchar.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**** INVALID WIDE CHARACTER */
 #ifndef TMT_INVALID_CHAR
 #define TMT_INVALID_CHAR ((wchar_t)0xfffd)
@@ -137,4 +141,7 @@ const TMTPOINT *tmt_cursor(const TMT *vt);
 void tmt_clean(TMT *vt);
 void tmt_reset(TMT *vt);
 
+#ifdef __cplusplus
+}
+#endif
 #endif
